@@ -72,7 +72,7 @@ class TicTacToe
 
   def won?
       WIN_COMBINATIONS.each do |winning_combo|
-      if  board[winning_combo[0]] == board[winning_combo[1]] && board[winning_combo[1]] == board[winning_combo[2]] && position_taken?(board, winning_combo[0])
+      if  @board[winning_combo[0]] == @board[winning_combo[1]] && @board[winning_combo[1]] == @board[winning_combo[2]] && position_taken?(winning_combo[0])
         return winning_combo
       else
         false
@@ -82,7 +82,7 @@ class TicTacToe
   end
 
   def full?
-    board.all? {|board_full| board_full == "X" || board_full == "O"}
+    @board.all? {|board_full| @board_full == "X" || @board_full == "O"}
   end
 
   def draw?
