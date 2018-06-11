@@ -35,7 +35,7 @@ class TicTacToe
      board[index] == " " || board[index] == "" || board[index] == nil ? false : true
   end
 
-  def move(board, index, character)
+  def move(index, character)
     @board[index] = character
   end
 
